@@ -1,5 +1,5 @@
 # MMA3001 Airfoil Noise Prediction
-Prediction and analysis of NACA 0012 airfoil noise using linear regression and decision tree regression.
+Prediction and analysis of NACA 0012 airfoil noise using Linear Regression, Decision Tree Regression and Support Vector Regression.
 
 ## Overview
 This project investigates the prediction of airfoil noise production using machine learning methods such as:
@@ -60,7 +60,7 @@ The workflow consists of:
 6. Computational runtime comparison
 7. Engineering sensitivity analysis
 8. Prediction error analysis
-9. 
+
 ## Validation and Testing
 
 Model performance is evaluated using a withheld test dataset and cross validation. MAE, RMSE and R² are used to evaluate predictive performance.
