@@ -1,10 +1,11 @@
-# MMA3001-Project-Airfoil-Noise-Prediction
+# MMA3001 Airfoil Noise Prediction
 Prediction and analysis of NACA 0012 airfoil noise using linear regression and decision tree regression.
 
-# MMA3001 Airfoil Noise Prediction
-
 ## Overview
-This project investigates the prediction of airfoil noise production using machine learning methods such as ***fill here when picked***
+This project investigates the prediction of airfoil noise production using machine learning methods such as:
+- Linear Regression
+- Decision Tree Regression
+- Support Vector Regression (SVR)
 
 Experimental data for a NACA 0012 airfoil are obtained from the UCI Airfoil Self-Noise dataset.
 
@@ -24,23 +25,64 @@ The project uses the UCI Airfoil Self-Noise dataset containing 1,503 experimenta
 ### Output
 - Sound pressure level (dB)
 
+## Computational Approach
+
+Linear Regression is used as the baseline model. Decision Tree Regression and Support Vector Regression are investigated as nonlinear alternatives.
+
+The models are evaluated using:
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- R-squared (R²)
+- Cross-validation
+- Prediction runtime
+
+Model optimisation is performed by altering model parameters. The final selected model is an RBF kernel Support Vector Regression model, with optimised parameters.
+
 ## Project Structure
     data/        Dataset used in the project
     notebooks/   Data analysis and development of models
     src/         Reusable Python source code
     tests/       Automated tests
     docs/        Generated HTML documentation
+    pytest_report.txt   Automated test report
+    README.md           Project overview and repository guide
+    LICENSE             Project licence
 
 ## Computational Workflow
 The project developed using Python and Google Colab, with progress being maintained using Git and GitHub.
 
 The workflow consists of:
 1. Data exploration and analysis
-2. Baseline model development
-3. Alternative model development
+2. Linear Regression baseline development
+3. Decision Tree and SVR development
 4. Model validation and comparison
-5. Model optimisation
-6. Engineering interpretation and sensitivity analysis
+5. Parameter optimisation
+6. Computational runtime comparison
+7. Engineering sensitivity analysis
+8. Prediction error analysis
+9. 
+## Validation and Testing
+
+Model performance is evaluated using a withheld test dataset and cross validation. MAE, RMSE and R² are used to evaluate predictive performance.
+
+Reusable functions in the src directory are tested using pytest. The generated test report is available in pytest_report.txt.
+
+HTML documentation generated using pdoc is found in the docs directory.
+
+## Key Result
+
+The optimised SVR provided the strongest test performance of the models investigated:
+- MAE: 1.537 dB
+- RMSE: 2.182 dB
+- R²: 0.905
+
+The results demonstrate that nonlinear regression improves prediction accuracy compared with the Linear Regression baseline for this dataset.
+
+## Limitations
+
+The models are developed and evaluated using the available NACA 0012 experimental dataset and therefore should not be assumed to generalise to other airfoil geometries or operating conditions outside the dataset.
+
+The engineering sensitivity analysis varies one input at a time while holding the remaining inputs at their median values. The resulting curves represent model behaviour and interpolation and should not be interpreted as additional experimental measurements.
 
 ## Repository
 The notebooks directory contains the model development and analysis. Reusable functions developed during the project will be maintained separately in the src directory and tested using automated tests.
