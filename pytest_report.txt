@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.15, pytest-8.4.2, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /content/MMA3001-Project-Airfoil-Noise-Prediction
+plugins: anyio-4.15.1, langsmith-0.12.5, typeguard-4.6.0
+collecting ... collected 4 items
+
+tests/test_analysis.py::test_sensitivity_prediction_output PASSED        [ 25%]
+tests/test_data_processing.py::test_prepare_model_data_split PASSED      [ 50%]
+tests/test_evaluation.py::test_evaluate_regression_perfect_prediction PASSED [ 75%]
+tests/test_evaluation.py::test_evaluate_regression_known_error PASSED    [100%]
+
+============================== 4 passed in 0.91s ===============================
